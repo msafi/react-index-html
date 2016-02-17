@@ -1,6 +1,6 @@
 # React `index.html`
 
-Open `index.html` in the browser, and React!
+Open [`index.html`](/index.html) in the browser of your choice, and React!
 
 * Supports JSX
 * Supports ES2015
