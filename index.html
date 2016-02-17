@@ -20,13 +20,12 @@
   )
 </script>
 
-<script id="executionScript"></script>
+<script id="processedScript"></script>
 <script type="text/javascript">
-  document
-    .querySelector('#executionScript')
-    .innerHTML = Babel.transform(
-    document.querySelector('#babel').innerHTML, {presets: ['es2015', 'react']}
-  ).code
+  var babelScript = document.querySelector('#babel').innerHTML
+  var processedScript = Babel.transform(babelScript, {presets: ['es2015', 'react']}).code
+  
+  document.querySelector('#processedScript').innerHTML = processedScript
 </script>
 </body>
 </html>
