@@ -1,0 +1,34 @@
+<html>
+<head>
+  <title>React index.html</title>
+</head>
+
+<body>
+<div id="content"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.4.4/babel.min.js"></script>
+<script src="https://fb.me/react-0.14.7.js"></script>
+<script src="https://fb.me/react-dom-0.14.7.js"></script>
+<script type="text/jsx" id="babel">
+  const SayHi = ({name}) => (
+    <div>Hi, {name}!</div>
+  )
+
+  ReactDOM.render(
+    <SayHi name="friend"></SayHi>,
+    document.querySelector('#content')
+  )
+</script>
+
+<script id="executionScript"></script>
+<script type="text/javascript">
+  document
+    .querySelector('#executionScript')
+    .innerHTML = Babel.transform(
+    document.querySelector('#babel').innerHTML, {presets: ['es2015', 'react']}
+  ).code
+</script>
+</body>
+</html>
+
+<!-- https://github.com/msafi/react-index-html -->
