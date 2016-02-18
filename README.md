@@ -1,6 +1,10 @@
 # React `index.html`
 
-Open [`index.html`](/index.html) in the browser of your choice, and React!
+### How to use
+
+Just open [`index.html`](/index.html) in the browser of your choice, and React!
+
+### Features
 
 * Supports JSX
 * Supports ES2015
